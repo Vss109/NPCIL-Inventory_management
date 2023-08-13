@@ -1,0 +1,52 @@
+<h2 align="center"><mark>Displaying All Records</mark></h2>
+<center><table border="1" cellspacing="7" width="80%">
+    <tr>
+        <th width="10%">First_name</th>
+        <th width="10%">Last_name</th>
+        <th width="25%">Email</th>
+        <th width="10%">Date</th>
+        <th width="5%">In_time</th>
+        <th width="5%">Out_time</th>
+        <th width="15%">Phone_number</th>
+</tr>
+
+<?php
+while($result = mysqli_fetch_assoc($data))
+{
+    echo "<tr>
+        <td>".$result[First_name]."</td>
+        <td>".$result[Last_name]."</td>
+        <td>".$result[Email]."</td>
+        <td>".$result[Date]."</td>
+        <td>".$result[In_time]."</td>
+        <td>".$result[Out_time]."</td>
+        <td>".$result[Phone_number]."</td>
+
+        <td><a href='Update.php'>Update</a></td>
+    </tr>
+    ";
+}
+}
+else
+{
+    echo "No records found";
+}
+?>
+</table>
+</center>
+
+
+<html>
+    <head>
+        <title>Display</title>
+        <style>
+            body
+            {
+                background: #D071f9;
+            }
+            table
+            {
+                background-color: white;
+            }
+            </style>
+            </head>
